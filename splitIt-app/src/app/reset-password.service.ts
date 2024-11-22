@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ResetPasswordService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:5500';
 
   constructor(private http: HttpClient) { }
 

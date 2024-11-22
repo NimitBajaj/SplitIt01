@@ -9,7 +9,7 @@ import { UsersService } from './users.service';
   providedIn: 'root',
 })
 export class GroupService {
-  private groupUrl = 'http://localhost:3000/api/groups';
+  private groupUrl = 'http://localhost:5500/api/groups';
 
   constructor(private http: HttpClient, private authService: AuthService, private usersService: UsersService) { }
 

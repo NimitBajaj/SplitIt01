@@ -14,7 +14,12 @@ const app = express();
 app.use(express.json());
 
 // CORS access to angular
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:4200', // Replace with your Angular app's URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
+
 
 // MongoDb database setup
 // mongoose.connect('mongodb://127.0.0.1:27017/SplitIt', {
@@ -24,7 +29,7 @@ app.use(cors());
 
 const uri = process.env.MONGODB_URI;
 
-mongoose.connect(uri, {
+mongoose.connect('mongodb://localhost:27017/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -210,7 +215,7 @@ const expensesRouter = require('./routes/expenses');
 app.use('/api/expenses', expensesRouter);
 
 // Listening on port 3000
-const PORT = 3000;
+const PORT = 5500;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

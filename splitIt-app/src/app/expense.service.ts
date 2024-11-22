@@ -7,8 +7,8 @@ import { GroupService } from './group.service';
   providedIn: 'root',
 })
 export class ExpenseService {
-  private expensesUrl = 'http://localhost:3000/api/expenses';
-  private groupUrl = 'http://localhost:3000/api/groups';
+  private expensesUrl = 'http://localhost:5500/api/expenses';
+  private groupUrl = 'http://localhost:5500/api/groups';
 
   constructor(private http: HttpClient, private groupService: GroupService) { }
 
