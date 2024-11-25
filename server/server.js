@@ -15,17 +15,12 @@ app.use(express.json());
 
 // CORS access to angular
 app.use(cors({
-    origin: 'http://localhost:4200', // Replace with your Angular app's URL
+    origin: 'http://localhost:5500', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
 
 
-// MongoDb database setup
-// mongoose.connect('mongodb://127.0.0.1:27017/SplitIt', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// });
 
 const uri = process.env.MONGODB_URI;
 

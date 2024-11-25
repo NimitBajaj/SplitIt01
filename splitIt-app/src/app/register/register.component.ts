@@ -19,7 +19,7 @@ export class RegisterComponent {
         localStorage.setItem('userEmail', this.formData.email)
         this.errorMessage='';
         this.router.navigate(['/'])
-        // console.log('Registration successful', response);
+        //console.log('Registration successful', response);
       },
       error :(error) => {
         this.errorMessage = error.error.message;
