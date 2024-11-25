@@ -86,7 +86,7 @@ app.post('/api/login', async (req, res) => {
             return res.status(401).json({
                 type: 'incorrect_password',
                 message: 'Incorrect password. Please try again.',
-                suggestion: "Oops! Password slipped your mind? No biggie, happens to everyone! Just tap that reset button and let's work our magic to get you back in action" });
+                suggestion: "Forgot Password? Click the reset button" });
         }
 
         const token = jwt.sign({ userId: user._id }, process.env.ACCESS_TOKEN_SECRET, {
